@@ -19,6 +19,8 @@ body {
     width: 30%;
     margin-top: 20px;
     margin-block-end: 100px;
+    text-decoration: none ;
+    min-width: 200px;
 }
 
 .menu h2 {
@@ -41,7 +43,6 @@ body {
     transform: translateX(15px);
     color: orange;
 }
-
 .titulo {
     display: flex;
     justify-content: space-between;
