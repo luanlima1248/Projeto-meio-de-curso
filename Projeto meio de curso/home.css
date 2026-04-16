@@ -1,3 +1,7 @@
+* {
+    cursor: url(imagem/cursor.png) 2 2, auto;
+}
+
 body {
     flex-wrap: wrap;
     background: url(imagem/fundo.png);
