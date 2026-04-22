@@ -106,7 +106,7 @@ h1 {
 }
 
 h1::after {
-    content: "🎮";
+    content: "☄️";
     display: block;
     width: 200px;
     height: 2px;
@@ -173,4 +173,24 @@ hr {
     height: 1px;
     background: linear-gradient(to right, orange, red, black);
     margin: 20px 0;
+}
+
+.detalhe {
+    color: rgb(221, 183, 113);
+}
+
+.detalhe_1 {
+    color: orange;
+}
+
+.detalhe_2 {
+    color: rgb(76, 157, 228);
+}
+
+.detalhe_3 {
+    color: purple;
+}
+
+footer {
+    color: white;
 }
