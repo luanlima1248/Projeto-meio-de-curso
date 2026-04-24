@@ -1,0 +1,57 @@
+* {
+    font-family: sans-serif;
+    cursor: url(imagem/cursor.png) 2 2, auto;
+}
+
+.header {
+    background-color: #1b1e28;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+.menu li {
+    list-style: none;
+    margin: 10px;
+}
+
+.menu {
+    display: flex;
+    transition: 0.3s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    color: orange;
+}
+
+.logo img {
+    border-radius: 100%;
+    width: 70px;
+}
+
+.menu a {
+    display: block;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: rgba(155, 247, 7, 0.796);
+}
