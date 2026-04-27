@@ -3,6 +3,17 @@
     cursor: url(imagem/cursor.png) 2 2, auto;
 }
 
+body {
+    background: url(https://images.alphacoders.com/881/thumb-1920-881641.jpg);
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 30px;
+    height: 110vh;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
 .header {
     background-color: #1b1e28;
     display: flex;
