@@ -80,7 +80,7 @@ a:hover {
     padding: 40px;
     margin: 40px auto;
     width: 85%;
-    /* background: rgba(10, 10, 10, 0.95); */
+    background: rgba(10, 10, 10, 0.95);
     border: 2px solid #ff5a1f;
     border-radius: 15px;
     position: relative;
@@ -151,7 +151,7 @@ p {
 }
 
 .card img {
-    width: 100% auto;
+    width: 100%;
     border-radius: 8px;
 }
 
@@ -194,4 +194,43 @@ hr {
 
 footer {
     color: white;
+}
+
+@media (max-width: 768px) {
+    .conteudo_principal {
+        flex-direction: column;
+    }
+
+    .conteiner {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu a::after {
+        width: 100%;
+    }
+
+    .cavaleiros img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    footer {
+        text-align: center;
+    }
 }

@@ -91,3 +91,7 @@ hr {
 footer {
     color: white;
 }
+
+@meida (max-width: 768px){
+    
+}
