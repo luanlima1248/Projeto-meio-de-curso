@@ -78,18 +78,97 @@ a:hover {
 }
 
 .caixa {
-    background-color: aqua;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
     margin: 10px;
     padding: 20px;
-    border: color(red);
-    border: 10px;
-    height: 400px;
+    height: 600px;
     margin-top: 50px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: white;
 }
 
 .main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.caixa1 {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    height: 600px;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+    justify-content: flex-start;
+    color: white;
+    overflow: hidden;
+}
+
+.caixa::before {
+    content: "";
+    position: absolute;
+    background: url(imagem/contato_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.caixa1::before {
+    content: "";
+    position: absolute;
+    background: url(imagem/contato_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#titulo h2 {
+    margin-bottom: 10px;
+    color: #ff007f;
+    text-transform: uppercase;
+}
+
+#titulo p {
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.conteudo_baixo {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.conteudo_baixo button {
+    margin-top: 30px;
+    background: linear-gradient(to right, #e64a7e, #d812d5);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#txt {
+    color: #B8860b;
 }
