@@ -1,174 +1,235 @@
 * {
-    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: segoe UI, roboto, sans-serif;
     cursor: url(imagem/cursor.png) 2 2, auto;
 }
 
 body {
-    background: url(https://images.alphacoders.com/881/thumb-1920-881641.jpg);
-    flex-wrap: wrap;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin: 30px;
-    height: 110vh;
+    background: url(https://images.alphacoders.com/881/thumb-1920-881641.jpg) no-repeat center center fixed;
     background-size: cover;
-    overflow-x: hidden;
+    min-height: 100vh;
+    color: white;
 }
 
 .header {
-    background-color: #1b1e28;
+    background-color: rgba(20, 20,20,0.9);
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px 50px;
     align-items: center;
-    flex-wrap: wrap;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    transition: 0.3s;
-}
-
-a:hover {
-    transform: scale(1.1);
-}
-
-.menu li {
-    list-style: none;
-    margin: 10px;
-}
-
-.menu {
-    display: flex;
-    transition: 0.3s;
+    border-bottom: 2px solid #ff007f;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    color: white;
-    gap: 10px;
-    color: orange;
+    gap: 15px;
+    color: #ff007f;
 }
 
 .logo img {
-    border-radius: 100%;
-    width: 70px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff007f;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    gap: 60px;
+    text-align: center;
 }
 
 .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
     display: block;
-    font-size: 18px;
-}
-
-.menu a:hover {
-    color: rgba(155, 247, 7, 0.796);
+    font-size: 20px;
 }
 
 .menu a::after {
      content: "";
     display: block;
-    width: 200px;
+    width: 150px;
     height: 2px;
-    background: orange;
+    background: #9e1359;
     margin: 10px auto;
-    box-shadow: 0 0 10px orange;
+    box-shadow: 0 0 10px rgb(231, 27, 27);
 }
 
-.caixa {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: 10px;
-    padding: 20px;
-    height: 600px;
-    margin-top: 50px;
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    color: white;
+.menu a:hover {
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f;
+    transform: scale(1.6);
 }
 
 .main {
+    margin: 15px;
+    margin-top: 40px;
+    padding: 50px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.caixa1 {
+.card_bem_vindo, .card_cadastro, .card_login {
+    background: rgba(10, 10, 15, 0.85);
+    width: 350px;
+    min-height: 600px;
+    padding: 40px 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 0, 127, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    width: 350px;
-    margin: 10px;
-    padding: 20px;
-    height: 600px;
-    margin-top: 50px;
-    position: relative;
-    text-align: center;
-    justify-content: flex-start;
-    color: white;
-    overflow: hidden;
 }
 
-.caixa::before {
-    content: "";
-    position: absolute;
-    background: url(imagem/contato_1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.9;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.caixa1::before {
-    content: "";
-    position: absolute;
-    background: url(imagem/contato_2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.9;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-#titulo h2 {
-    margin-bottom: 10px;
+h2 {
     color: #ff007f;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
 }
 
-#titulo p {
-    font-size: 13px;
+.subtitulo {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+.conteudo_baixo p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: justify;
     margin-bottom: 20px;
-    padding: 0 10px;
 }
 
-.conteudo_baixo {
-    margin-top: 20px;
-    font-size: 14px;
+.forma_do_card, .forma-do-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
 }
 
-.conteudo_baixo button {
-    margin-top: 30px;
-    background: linear-gradient(to right, #e64a7e, #d812d5);
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 20px;
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #ff007f;
     font-weight: bold;
 }
 
-#txt {
-    color: #B8860b;
+input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ff007f;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+}
+
+.btn_1, .bnt_1 {
+    background: linear-gradient(45deg, #ff007f, #8a2be2);
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn_1:hover, .bnt_1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+}
+
+#txt, .link_recuperar {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+#txt a, .link_recuperar {
+    color: #ffb3d9;
+    text-decoration: none;
+}
+
+.link_recuperar:hover, #txt a:hover {
+    text-decoration: underline;
+}
+
+.card_cadastro, .card_login  {
+    justify-content: center;
+}
+
+footer {
+    color: white;
+    border: 5px solid gray;
+    background: rgba(20, 20,20,0.9);
+    width: 200px;
+    width: 100%;
+    border: none;
+    border-top: 2px solid gray;
+    text-align: center;
+   }
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 40px; 
+    }
+
+    .card_bem_vindo, .card_cadastro, .card_login {
+        width: 100%; 
+        max-width: 400px; 
+        min-height: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 20px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+    
+    .menu a::after {
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        border: none;
+        border-top: 2px solid gray;
+    }
 }

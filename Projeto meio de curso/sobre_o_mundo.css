@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('imagem/fundo_mundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Camada de sobreposição para legibilidade */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(180deg, 
+                rgba(75, 0, 130, 0.3) 0%, 
+                rgba(0, 0, 0, 0.9) 50%, 
+                rgba(255, 69, 0, 0.2) 100%);
+    z-index: -1;
+}
+
+/* HEADER & MENU */
+.menu-principal {
+    background: rgba(10, 10, 15, 0.95);
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+    border-bottom: 3px solid #ff4500;
+}
+
+.menu-item {
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-item img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid #00d2ff;
+    transition: 0.4s;
+}
+
+.menu-item:hover img {
+    border-color: #ff8c00;
+    box-shadow: 0 0 15px #ff8c00;
+}
+
+.menu-item p {
+    color: #00d2ff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+/* SEÇÃO INTRODUÇÃO */
+.introducao {
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.introducao h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px #4b0082;
+}
+
+.destaque-titulo {
+    color: #ff4500;
+    text-shadow: 0 0 15px #ff8c00;
+}
+
+.subtitulo-lore {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffcc00;
+    letter-spacing: 4px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.linha-separadora {
+    width: 300px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff4500, transparent);
+    border: none;
+    margin: 30px auto;
+}
+
+.citacao-lore {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #cccccc;
+    margin: 40px auto;
+    padding: 20px;
+    border-left: 5px solid #4b0082;
+    background: rgba(75, 0, 130, 0.1);
+    max-width: 800px;
+}
+
+.texto-introducao {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 20px auto;
+    color: #bbb;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* CAIXAS DE LORE (CONTEÚDO FLEX) */
+.caixa-lore {
+    background: rgba(10, 10, 15, 0.85);
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 50px;
+    clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
+    border-left: 5px solid #00d2ff;
+}
+
+.titulo-caixa {
+    text-align: center;
+    color: #00d2ff;
+    text-shadow: 0 0 15px #00d2ff;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.inverter .flex-container {
+    flex-direction: row-reverse;
+}
+
+.conteudo-texto { flex: 1; }
+
+.conteudo-texto h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.conteudo-texto p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #e0e0e0; 
+    margin-bottom: 20px;
+    text-align: justify;
+    text-align: center;
+}
+
+.container-imagem { flex: 0 0 500px; }
+
+.container-imagem img {
+    width: 100%;
+    border: 2px solid #4b0082;
+    transition: 0.5s;
+}
+
+.container-imagem img:hover {
+    border-color: #ff4500;
+    box-shadow: 0 0 20px #ff4500;
+}
+
+/* ESTATÍSTICAS */
+.grid-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.card-stat {
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(75, 0, 130, 0.2));
+    border: 2px solid #00d2ff;
+    border-top: 2px solid #ffcc00;
+    padding: 30px;
+    transform: skewX(-10deg);
+    text-align: center;
+    min-width: 200px;
+    transition: 0.3s;
+}
+
+.card-stat:hover {
+    border-color: #ffcc00;
+    box-shadow: 0 0 15px #ffcc00;
+}
+
+.card-stat .numero {
+    font-size: 3.5rem;
+    color: #ff4500;
+    font-family: 'Orbitron', sans-serif;
+    display: block;
+    transform: skewX(10deg);
+}
+
+.card-stat .legenda {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: #00d2ff;
+    display: block;
+    transform: skewX(10deg);
+}
+
+/* PILARES (GRID) */
+.grid-pilares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.pilar-card {
+    background: rgba(75, 0, 130, 0.1);
+    border-top: 4px solid #ff8c00;
+    padding: 25px;
+    text-align: center;
+}
+
+.pilar-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* DESTAQUES E UTILITÁRIOS */
+.destaque-azul { color: #00d2ff; font-weight: bold; }
+.destaque-vermelho { color: #ff4500; font-weight: bold; }
+.destaque-lore { color: #ffcc00; font-family: 'Orbitron', sans-serif; text-transform: uppercase; }
+
+.center { text-align: center; }
+
+strong {
+    color: #ffcc00; 
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-final {
+    text-align: center;
+    padding: 60px;
+    background: #000;
+    border-top: 3px solid #ff4500;
+    color: #ffcc00;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.conteudo-texto strong {
+    text-shadow: 0 0 15px;
+}
+
+@media (max-width: 1024px) {
+
+    .menu-principal {
+        gap: 30px;
+    }
+
+    .introducao h1 {
+        font-size: 3.5rem;
+    }
+
+    .flex-container {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+
+    .container-imagem {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .caixa-lore {
+        padding: 30px;
+        clip-path: none; 
+        border-right: 5px solid #00d2ff;
+        margin: 40px 20px;
+    }
+
+    .grid-stats {
+        flex-wrap: wrap; 
+    }
+}
+
+
+@media (max-width: 600px) {
+    .menu-principal {
+        flex-direction: grid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .menu-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .introducao {
+        padding: 60px 15px;
+    }
+
+    .introducao h1 {
+        font-size: 2.5rem;
+    }
+
+    .citacao-lore {
+        font-size: 1.1rem;
+    }
+
+    .grid-stats {
+        gap: 15px;
+    }
+
+    .card-stat {
+        min-width: 140px;
+        padding: 15px;
+    }
+
+    .card-stat .numero {
+        font-size: 2.2rem;
+    }
+
+    .grid-pilares {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-caixa {
+        font-size: 22px;
+    }
+
+    .conteudo-texto h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
